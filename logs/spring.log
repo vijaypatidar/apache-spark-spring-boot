@@ -1,0 +1,75 @@
+2021-09-11 21:16:38.289  INFO 4963 --- [restartedMain] com.example.spark.SparkApplication       : Starting SparkApplication using Java 11.0.12 on Vijays-MacBook-Pro.local with PID 4963 (/Users/vijaypatidar/projects/Spark/target/classes started by vijaypatidar in /Users/vijaypatidar/projects/Spark)
+2021-09-11 21:16:38.293  INFO 4963 --- [restartedMain] com.example.spark.SparkApplication       : No active profile set, falling back to default profiles: default
+2021-09-11 21:16:38.341  INFO 4963 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 21:16:38.343  INFO 4963 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 21:16:39.339  INFO 4963 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 21:16:39.346  INFO 4963 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 21:16:39.347  INFO 4963 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-11 21:16:39.445  INFO 4963 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 21:16:39.446  INFO 4963 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1103 ms
+2021-09-11 21:16:39.932  INFO 4963 --- [restartedMain] org.apache.spark.SparkContext            : Running Spark version 3.1.2
+2021-09-11 21:16:40.035  WARN 4963 --- [restartedMain] org.apache.hadoop.util.NativeCodeLoader  : Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-09-11 21:16:40.106  INFO 4963 --- [restartedMain] org.apache.spark.resource.ResourceUtils  : ==============================================================
+2021-09-11 21:16:40.107  INFO 4963 --- [restartedMain] org.apache.spark.resource.ResourceUtils  : No custom resources configured for spark.driver.
+2021-09-11 21:16:40.107  INFO 4963 --- [restartedMain] org.apache.spark.resource.ResourceUtils  : ==============================================================
+2021-09-11 21:16:40.107  INFO 4963 --- [restartedMain] org.apache.spark.SparkContext            : Submitted application: SparkFileSumApp
+2021-09-11 21:16:40.125  INFO 4963 --- [restartedMain] o.apache.spark.resource.ResourceProfile  : Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2021-09-11 21:16:40.135  INFO 4963 --- [restartedMain] o.apache.spark.resource.ResourceProfile  : Limiting resource is cpu
+2021-09-11 21:16:40.139  INFO 4963 --- [restartedMain] o.a.s.resource.ResourceProfileManager    : Added ResourceProfile id: 0
+2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing view acls to: vijaypatidar
+2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing modify acls to: vijaypatidar
+2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing view acls groups to: 
+2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing modify acls groups to: 
+2021-09-11 21:16:40.170  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(vijaypatidar); groups with view permissions: Set(); users  with modify permissions: Set(vijaypatidar); groups with modify permissions: Set()
+2021-09-11 21:16:40.345  INFO 4963 --- [restartedMain] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 53633.
+2021-09-11 21:16:40.368  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering MapOutputTracker
+2021-09-11 21:16:40.386  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
+2021-09-11 21:16:40.396  INFO 4963 --- [restartedMain] o.a.s.s.BlockManagerMasterEndpoint       : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2021-09-11 21:16:40.397  INFO 4963 --- [restartedMain] o.a.s.s.BlockManagerMasterEndpoint       : BlockManagerMasterEndpoint up
+2021-09-11 21:16:40.401  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering BlockManagerMasterHeartbeat
+2021-09-11 21:16:40.408  INFO 4963 --- [restartedMain] o.apache.spark.storage.DiskBlockManager  : Created local directory at /private/var/folders/y0/wzfvzd693tl5019yj_pg9_440000gn/T/blockmgr-887167fe-aef0-451f-b443-5d5b8e2bcc87
+2021-09-11 21:16:40.436  INFO 4963 --- [restartedMain] o.a.spark.storage.memory.MemoryStore     : MemoryStore started with capacity 1048.8 MiB
+2021-09-11 21:16:40.450  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
+2021-09-11 21:16:40.508  INFO 4963 --- [restartedMain] org.sparkproject.jetty.util.log          : Logging initialized @8943ms to org.sparkproject.jetty.util.log.Slf4jLog
+2021-09-11 21:16:40.542  INFO 4963 --- [restartedMain] org.sparkproject.jetty.server.Server     : jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 11.0.12+7-LTS
+2021-09-11 21:16:40.555  INFO 4963 --- [restartedMain] org.sparkproject.jetty.server.Server     : Started @8990ms
+2021-09-11 21:16:40.572  INFO 4963 --- [restartedMain] o.s.jetty.server.AbstractConnector       : Started ServerConnector@4a420738{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2021-09-11 21:16:40.573  INFO 4963 --- [restartedMain] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
+2021-09-11 21:16:40.586  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@76094b8a{/jobs,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.591  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@3e96cf44{/jobs/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.591  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@7007ed2b{/jobs/job,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.593  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@5b35c086{/jobs/job/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.593  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@7334b58d{/stages,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.594  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@329c73a5{/stages/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.594  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@1741b965{/stages/stage,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.596  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@33da1d30{/stages/stage/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.597  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@29f5901f{/stages/pool,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.597  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@6b4835de{/stages/pool/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.597  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@9189e9b{/storage,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.600  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@6f53f57a{/storage/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.601  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@6ac1275a{/storage/rdd,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.601  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@219b4a73{/storage/rdd/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.602  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@618b3815{/environment,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.603  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@570ead61{/environment/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.604  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@74d2b50f{/executors,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.604  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@177b482b{/executors/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.605  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@31be798b{/executors/threadDump,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.608  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@2dd6c985{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.614  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@119f3e81{/static,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.615  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@f5a7b66{/,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.616  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@1a12c709{/api,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.618  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@543f37a4{/jobs/job/kill,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.619  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@407003ea{/stages/stage/kill,null,AVAILABLE,@Spark}
+2021-09-11 21:16:40.620  INFO 4963 --- [restartedMain] org.apache.spark.ui.SparkUI              : Bound SparkUI to 0.0.0.0, and started at http://192.168.1.37:4040
+2021-09-11 21:16:40.696  INFO 4963 --- [restartedMain] org.apache.spark.executor.Executor       : Starting executor ID driver on host 192.168.1.37
+2021-09-11 21:16:40.714  INFO 4963 --- [restartedMain] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53634.
+2021-09-11 21:16:40.714  INFO 4963 --- [restartedMain] o.a.s.n.netty.NettyBlockTransferService  : Server created on 192.168.1.37:53634
+2021-09-11 21:16:40.715  INFO 4963 --- [restartedMain] org.apache.spark.storage.BlockManager    : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2021-09-11 21:16:40.719  INFO 4963 --- [restartedMain] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 53634, None)
+2021-09-11 21:16:40.722  INFO 4963 --- [dispatcher-BlockManagerMaster] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager 192.168.1.37:53634 with 1048.8 MiB RAM, BlockManagerId(driver, 192.168.1.37, 53634, None)
+2021-09-11 21:16:40.729  INFO 4963 --- [restartedMain] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 53634, None)
+2021-09-11 21:16:40.730  INFO 4963 --- [restartedMain] org.apache.spark.storage.BlockManager    : Initialized BlockManager: BlockManagerId(driver, 192.168.1.37, 53634, None)
+2021-09-11 21:16:40.738  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@14fbaffe{/metrics/json,null,AVAILABLE,@Spark}
+2021-09-11 21:16:41.122  INFO 4963 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 21:16:41.141  INFO 4963 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 21:16:41.164  INFO 4963 --- [restartedMain] com.example.spark.SparkApplication       : Started SparkApplication in 3.294 seconds (JVM running for 9.6)
