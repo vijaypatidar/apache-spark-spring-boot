@@ -12,13 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import scala.Tuple2;
 
 import java.io.File;
-import java.io.IOException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.Map;
 
 @RequestMapping("/jobs")
 @RestController
@@ -60,5 +56,17 @@ public class JobController {
                 .collect();
     }
 
+    @PostMapping("/count")
+    public List<AbstractMap.SimpleEntry<String, Integer>> wordCount() {
+        logger.info("getLog " + new Date());
+        String log = new File("logs/spring.log").getPath();
+        JavaRDD<String> lines = sc.textFile(log);
+        JavaRDD<String> words = lines.flatMap(line -> Arrays.asList(line.split(" ")).iterator()).filter(word->!word.matches(".*[0-9].*"));
+        JavaPairRDD<String, Integer> pair = words.mapToPair(word -> new Tuple2<>(word, 1));
+        JavaPairRDD<String, Integer> wordPair = pair.reduceByKey(Integer::sum);
+        JavaRDD<AbstractMap.SimpleEntry<String, Integer>> map = wordPair.map(tuple -> new AbstractMap.SimpleEntry<>(tuple._1(), tuple._2()));
+        JavaRDD<AbstractMap.SimpleEntry<String, Integer>> sorted = map.sortBy(AbstractMap.SimpleEntry::getValue, true, 12);
+        return sorted.collect();
+    }
 
 }

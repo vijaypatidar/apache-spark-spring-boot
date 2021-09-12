@@ -16,7 +16,7 @@ public class SparkApplication {
     @Bean
     public JavaSparkContext getJavaSparkContext() {
         SparkConf conf = new SparkConf().setMaster("local[*]")
-                .setAppName("SparkFileSumApp");
+                .setAppName("Spark Demo");
         return new JavaSparkContext(conf);
     }
 }
