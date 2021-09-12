@@ -1,75 +1,392 @@
-2021-09-11 21:16:38.289  INFO 4963 --- [restartedMain] com.example.spark.SparkApplication       : Starting SparkApplication using Java 11.0.12 on Vijays-MacBook-Pro.local with PID 4963 (/Users/vijaypatidar/projects/Spark/target/classes started by vijaypatidar in /Users/vijaypatidar/projects/Spark)
-2021-09-11 21:16:38.293  INFO 4963 --- [restartedMain] com.example.spark.SparkApplication       : No active profile set, falling back to default profiles: default
-2021-09-11 21:16:38.341  INFO 4963 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-09-11 21:16:38.343  INFO 4963 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-09-11 21:16:39.339  INFO 4963 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-09-11 21:16:39.346  INFO 4963 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-09-11 21:16:39.347  INFO 4963 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
-2021-09-11 21:16:39.445  INFO 4963 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-09-11 21:16:39.446  INFO 4963 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1103 ms
-2021-09-11 21:16:39.932  INFO 4963 --- [restartedMain] org.apache.spark.SparkContext            : Running Spark version 3.1.2
-2021-09-11 21:16:40.035  WARN 4963 --- [restartedMain] org.apache.hadoop.util.NativeCodeLoader  : Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2021-09-11 21:16:40.106  INFO 4963 --- [restartedMain] org.apache.spark.resource.ResourceUtils  : ==============================================================
-2021-09-11 21:16:40.107  INFO 4963 --- [restartedMain] org.apache.spark.resource.ResourceUtils  : No custom resources configured for spark.driver.
-2021-09-11 21:16:40.107  INFO 4963 --- [restartedMain] org.apache.spark.resource.ResourceUtils  : ==============================================================
-2021-09-11 21:16:40.107  INFO 4963 --- [restartedMain] org.apache.spark.SparkContext            : Submitted application: SparkFileSumApp
-2021-09-11 21:16:40.125  INFO 4963 --- [restartedMain] o.apache.spark.resource.ResourceProfile  : Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
-2021-09-11 21:16:40.135  INFO 4963 --- [restartedMain] o.apache.spark.resource.ResourceProfile  : Limiting resource is cpu
-2021-09-11 21:16:40.139  INFO 4963 --- [restartedMain] o.a.s.resource.ResourceProfileManager    : Added ResourceProfile id: 0
-2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing view acls to: vijaypatidar
-2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing modify acls to: vijaypatidar
-2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing view acls groups to: 
-2021-09-11 21:16:40.169  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : Changing modify acls groups to: 
-2021-09-11 21:16:40.170  INFO 4963 --- [restartedMain] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(vijaypatidar); groups with view permissions: Set(); users  with modify permissions: Set(vijaypatidar); groups with modify permissions: Set()
-2021-09-11 21:16:40.345  INFO 4963 --- [restartedMain] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 53633.
-2021-09-11 21:16:40.368  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering MapOutputTracker
-2021-09-11 21:16:40.386  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
-2021-09-11 21:16:40.396  INFO 4963 --- [restartedMain] o.a.s.s.BlockManagerMasterEndpoint       : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
-2021-09-11 21:16:40.397  INFO 4963 --- [restartedMain] o.a.s.s.BlockManagerMasterEndpoint       : BlockManagerMasterEndpoint up
-2021-09-11 21:16:40.401  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering BlockManagerMasterHeartbeat
-2021-09-11 21:16:40.408  INFO 4963 --- [restartedMain] o.apache.spark.storage.DiskBlockManager  : Created local directory at /private/var/folders/y0/wzfvzd693tl5019yj_pg9_440000gn/T/blockmgr-887167fe-aef0-451f-b443-5d5b8e2bcc87
-2021-09-11 21:16:40.436  INFO 4963 --- [restartedMain] o.a.spark.storage.memory.MemoryStore     : MemoryStore started with capacity 1048.8 MiB
-2021-09-11 21:16:40.450  INFO 4963 --- [restartedMain] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
-2021-09-11 21:16:40.508  INFO 4963 --- [restartedMain] org.sparkproject.jetty.util.log          : Logging initialized @8943ms to org.sparkproject.jetty.util.log.Slf4jLog
-2021-09-11 21:16:40.542  INFO 4963 --- [restartedMain] org.sparkproject.jetty.server.Server     : jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 11.0.12+7-LTS
-2021-09-11 21:16:40.555  INFO 4963 --- [restartedMain] org.sparkproject.jetty.server.Server     : Started @8990ms
-2021-09-11 21:16:40.572  INFO 4963 --- [restartedMain] o.s.jetty.server.AbstractConnector       : Started ServerConnector@4a420738{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
-2021-09-11 21:16:40.573  INFO 4963 --- [restartedMain] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
-2021-09-11 21:16:40.586  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@76094b8a{/jobs,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.591  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@3e96cf44{/jobs/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.591  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@7007ed2b{/jobs/job,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.593  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@5b35c086{/jobs/job/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.593  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@7334b58d{/stages,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.594  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@329c73a5{/stages/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.594  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@1741b965{/stages/stage,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.596  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@33da1d30{/stages/stage/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.597  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@29f5901f{/stages/pool,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.597  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@6b4835de{/stages/pool/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.597  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@9189e9b{/storage,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.600  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@6f53f57a{/storage/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.601  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@6ac1275a{/storage/rdd,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.601  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@219b4a73{/storage/rdd/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.602  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@618b3815{/environment,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.603  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@570ead61{/environment/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.604  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@74d2b50f{/executors,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.604  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@177b482b{/executors/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.605  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@31be798b{/executors/threadDump,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.608  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@2dd6c985{/executors/threadDump/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.614  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@119f3e81{/static,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.615  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@f5a7b66{/,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.616  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@1a12c709{/api,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.618  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@543f37a4{/jobs/job/kill,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.619  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@407003ea{/stages/stage/kill,null,AVAILABLE,@Spark}
-2021-09-11 21:16:40.620  INFO 4963 --- [restartedMain] org.apache.spark.ui.SparkUI              : Bound SparkUI to 0.0.0.0, and started at http://192.168.1.37:4040
-2021-09-11 21:16:40.696  INFO 4963 --- [restartedMain] org.apache.spark.executor.Executor       : Starting executor ID driver on host 192.168.1.37
-2021-09-11 21:16:40.714  INFO 4963 --- [restartedMain] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53634.
-2021-09-11 21:16:40.714  INFO 4963 --- [restartedMain] o.a.s.n.netty.NettyBlockTransferService  : Server created on 192.168.1.37:53634
-2021-09-11 21:16:40.715  INFO 4963 --- [restartedMain] org.apache.spark.storage.BlockManager    : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
-2021-09-11 21:16:40.719  INFO 4963 --- [restartedMain] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 53634, None)
-2021-09-11 21:16:40.722  INFO 4963 --- [dispatcher-BlockManagerMaster] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager 192.168.1.37:53634 with 1048.8 MiB RAM, BlockManagerId(driver, 192.168.1.37, 53634, None)
-2021-09-11 21:16:40.729  INFO 4963 --- [restartedMain] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 53634, None)
-2021-09-11 21:16:40.730  INFO 4963 --- [restartedMain] org.apache.spark.storage.BlockManager    : Initialized BlockManager: BlockManagerId(driver, 192.168.1.37, 53634, None)
-2021-09-11 21:16:40.738  INFO 4963 --- [restartedMain] o.s.jetty.server.handler.ContextHandler  : Started o.s.j.s.ServletContextHandler@14fbaffe{/metrics/json,null,AVAILABLE,@Spark}
-2021-09-11 21:16:41.122  INFO 4963 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-09-11 21:16:41.141  INFO 4963 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-09-11 21:16:41.164  INFO 4963 --- [restartedMain] com.example.spark.SparkApplication       : Started SparkApplication in 3.294 seconds (JVM running for 9.6)
+2021-09-12 02:37:31.709  WARN 6477 --- [dispatcher-event-loop-0] org.apache.spark.HeartbeatReceiver       : Removing executor driver with no recent heartbeats: 2266481 ms exceeds timeout 120000 ms
+2021-09-12 02:37:31.749  WARN 6477 --- [kill-executor-thread] org.apache.spark.SparkContext            : Killing executors is not supported by current scheduler.
+2021-09-12 02:37:32.645  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 02:37:32.650  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 02:37:32.650  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 02:37:32.658  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 02:37:32.661  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 02:37:32.669  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 02:42:55.176  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 02:42:55.182  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 02:42:55.183  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 02:59:36.385  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 02:59:36.495  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 02:59:36.516  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 03:16:24.324  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 03:16:24.325  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 03:16:24.326  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 03:16:24.326  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 03:16:24.327  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 03:16:24.337  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 03:40:20.008  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 03:40:20.012  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 03:40:20.012  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 03:40:20.019  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 03:40:20.019  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 03:40:20.026  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 04:11:30.466  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 04:11:30.467  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 04:11:30.467  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 04:11:30.468  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 04:11:30.468  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 04:11:30.473  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 04:38:24.361  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 04:38:24.363  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 04:38:24.363  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 04:38:24.364  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 04:38:24.364  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 04:38:24.366  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 05:17:42.003  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 05:17:42.015  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 05:17:42.015  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 05:17:42.023  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 05:17:42.025  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 05:17:42.029  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 05:33:12.047  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 05:33:12.057  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 05:33:12.058  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 05:33:12.059  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 05:33:12.059  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 05:33:12.062  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 06:07:59.223  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 06:07:59.226  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 06:07:59.226  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 06:07:59.227  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 06:07:59.227  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 06:07:59.230  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 06:42:55.594  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 06:42:55.598  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 06:42:55.598  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 06:42:55.608  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 06:42:55.609  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 06:42:55.619  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 07:15:16.752  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 07:15:16.754  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 07:15:16.754  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 07:15:16.755  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 07:15:16.756  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 07:15:16.763  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 07:48:05.071  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 07:48:05.072  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 07:48:05.072  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 07:48:05.073  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 07:48:05.073  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 07:48:05.075  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:04:45.299  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:04:45.300  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:04:45.300  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:04:45.303  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:04:45.303  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:04:45.305  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:25:30.284  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:25:30.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:25:30.288  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:25:30.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:25:30.292  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:25:30.302  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:25:44.302  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:25:44.305  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:25:44.305  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:25:44.306  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:25:44.307  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:25:44.313  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:25:54.286  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:25:54.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:25:54.288  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:25:54.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:25:54.290  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:25:54.293  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:26:04.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:26:04.294  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:26:04.295  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:04.297  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:04.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:26:04.304  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:26:14.281  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:26:14.283  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:26:14.283  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:14.284  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:14.284  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:26:14.293  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:26:24.279  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:26:24.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:26:24.289  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:24.289  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:24.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:26:24.291  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:26:34.283  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:26:34.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:26:34.286  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:34.286  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:34.287  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:26:34.289  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:26:44.281  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:26:44.282  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:26:44.282  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:44.282  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:44.282  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:26:44.284  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:26:54.303  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:26:54.308  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:26:54.315  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:54.318  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:26:54.321  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:26:54.326  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:27:04.287  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:27:04.290  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:27:04.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:04.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:04.291  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:27:04.292  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:27:14.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:27:14.286  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:27:14.286  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:14.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:14.290  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:27:14.296  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:27:24.278  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:27:24.279  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:27:24.280  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:24.280  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:24.280  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:27:24.290  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:27:34.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:27:34.296  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:27:34.296  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:34.298  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:34.298  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:27:34.302  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:27:44.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:27:44.286  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:27:44.286  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:44.287  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:44.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:27:44.290  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:27:54.287  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:27:54.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:27:54.289  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:54.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:27:54.291  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:27:54.292  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:28:04.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:28:04.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:28:04.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:04.291  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:04.291  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:28:04.293  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:28:14.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:28:14.291  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:28:14.291  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:14.298  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:14.298  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:28:14.308  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:28:24.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:28:24.291  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:28:24.291  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:24.292  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:24.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:28:24.296  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:28:34.303  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:28:34.304  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:28:34.304  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:34.305  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:34.305  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:28:34.307  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:28:44.286  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:28:44.287  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:28:44.288  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:44.289  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:44.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:28:44.290  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:28:54.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:28:54.308  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:28:54.309  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:54.317  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:28:54.318  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:28:54.322  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:29:04.286  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:29:04.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:29:04.288  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:04.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:04.290  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:29:04.293  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:29:14.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:29:14.286  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:29:14.287  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:14.295  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:14.295  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:29:14.297  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:29:24.287  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:29:24.292  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:29:24.292  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:24.294  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:24.295  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:29:24.301  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:29:34.294  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:29:34.296  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:29:34.296  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:34.297  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:34.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:29:34.306  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:29:44.309  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:29:44.313  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:29:44.314  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:44.315  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:44.315  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:29:44.319  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:29:54.294  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:29:54.296  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:29:54.296  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:54.298  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:29:54.298  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:29:54.305  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:30:04.292  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:30:04.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:30:04.296  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:04.299  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:04.299  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:30:04.311  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:30:14.295  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:30:14.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:30:14.297  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:14.303  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:14.303  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:30:14.309  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:30:24.295  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:30:24.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:30:24.297  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:24.299  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:24.300  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:30:24.305  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:30:34.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:30:34.308  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:30:34.309  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:34.310  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:34.311  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:30:34.317  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:30:44.306  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:30:44.309  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:30:44.309  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:44.316  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:44.316  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:30:44.320  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:30:54.306  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:30:54.307  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:30:54.308  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:54.309  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:30:54.310  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:30:54.319  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:31:04.311  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:31:04.312  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:31:04.312  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:04.316  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:04.316  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:31:04.321  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:31:14.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:31:14.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:31:14.285  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:14.285  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:14.285  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:31:14.288  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:31:24.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:31:24.301  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:31:24.301  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:24.308  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:24.308  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:31:24.317  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:31:34.287  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:31:34.287  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:31:34.287  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:34.288  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:34.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:31:34.292  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:31:44.308  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:31:44.308  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:31:44.308  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:44.309  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:44.309  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:31:44.315  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:31:54.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:31:54.288  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:31:54.289  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:54.289  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:31:54.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:31:54.290  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:32:04.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:32:04.294  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:32:04.294  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:04.295  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:04.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:32:04.300  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:32:14.289  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:32:14.290  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:32:14.290  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:14.292  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:14.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:32:14.299  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:32:24.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:32:24.299  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:32:24.299  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:24.300  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:24.301  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:32:24.317  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:32:34.300  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:32:34.301  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:32:34.301  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:34.304  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:34.304  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:32:34.309  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:32:44.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:32:44.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:32:44.293  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:44.294  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:44.294  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:32:44.299  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:32:54.292  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:32:54.292  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:32:54.292  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:54.293  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:32:54.293  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:32:54.296  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:33:04.297  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:33:04.298  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:33:04.298  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:04.298  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:04.299  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:33:04.300  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:33:14.318  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:33:14.319  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:33:14.319  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:14.321  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:14.321  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:33:14.324  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:33:24.317  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:33:24.318  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:33:24.318  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:24.319  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:24.319  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:33:24.323  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:33:34.321  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:33:34.322  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:33:34.323  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:34.328  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:34.328  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:33:34.334  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:33:44.323  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:33:44.325  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:33:44.325  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:44.327  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:44.328  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:33:44.331  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:33:54.324  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:33:54.324  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:33:54.325  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:54.325  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:33:54.326  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:33:54.332  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
+2021-09-12 08:34:04.332  INFO 6477 --- [executor-heartbeater] org.apache.spark.executor.Executor       : Told to re-register on heartbeat
+2021-09-12 08:34:04.335  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None) re-registering with master
+2021-09-12 08:34:04.335  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registering BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:34:04.337  INFO 6477 --- [executor-heartbeater] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager BlockManagerId(driver, 192.168.1.37, 55420, None)
+2021-09-12 08:34:04.337  INFO 6477 --- [executor-heartbeater] org.apache.spark.storage.BlockManager    : Reporting 2 blocks to the master.
+2021-09-12 08:34:04.340  INFO 6477 --- [dispatcher-BlockManagerMaster] o.apache.spark.storage.BlockManagerInfo  : Updated broadcast_0_piece0 in memory on 192.168.1.37:55420 (current size: 2.6 KiB, original size: 2.6 KiB, free: 1048.8 MiB)
