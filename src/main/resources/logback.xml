@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="map" class="com.example.spark.logger.MyAppender"/>
+    <appender name="map1" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="map" />
+        <appender-ref ref="map1" />
+    </root>
+</configuration>
